@@ -1,0 +1,14 @@
+{
+    "name": "send-email",
+    "version": "1.0.0",
+    "description": "Lambda to send email using SendGrid node library",
+    "main": "app.js",  
+    "author": "Dan Bartlett",
+    "license": "MIT",
+    "scripts": {
+      "test": "mocha tests/unit/"
+    },
+    "devDependencies": {
+    }
+  }
+  
