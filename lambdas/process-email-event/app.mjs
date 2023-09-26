@@ -9,9 +9,14 @@
  * adds additional configuration and then saves it to the request folder (prefix)
  * in the S3 bucket where the put event will trigger the send-email lambda.
  * 
- * This function is designed to handle email events with a SINGLE email. The 
- * SendGrid API can handle multiple emails in a single request. This function
- * could easily be altered to be able to handle multiple emails in a single request.
+ * This function is designed to handle email events with a SINGLE email or an
+ * event with multiple emails using personalizations. There are examples of
+ * each in the /sample-email-json folder in this repository. 
+ * 
+ * Refer to the SendGrid docs on options to customize your API calls:
+ * https://github.com/sendgrid/sendgrid-nodejs/tree/main/docs/use-cases
+ *   
+ * This function can be altered to meet your requirements.
  * 
  */
 

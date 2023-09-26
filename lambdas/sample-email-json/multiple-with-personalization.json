@@ -1,0 +1,54 @@
+{
+    "from": "<your-sendgrid-verified-sender>",
+    "subject": "Email with Personalizations",
+    "customArgs": 
+      {
+        "someId": "<Some Value for someId>"    
+      },
+    "personalizations": [
+      {
+        "to": "someone@some-to-domain.com",
+        "dynamic_template_data": {
+            "guest": "Someone",            
+            "customerFirst": "Some",
+            "customerLast": "One",
+            "customerEmail": "someone@some-to-domain.com",
+            "ticketNumber": "<value for ticketNumber>",
+              "orderItems": [
+                   {"itemName":"widget1", "price":3.99},
+                   {"itenName":"widget2", "price":50.25} 
+              ]
+          
+          },
+        "customArgs": {
+            "emailTo": "someone@some-to-domain.com",
+            "customerId": "<value for customerId>"
+        }      
+      },
+      {
+        "to": "someone@some-to-domain.com",
+        "dynamic_template_data": {
+            "guest": "SomeoneElse",            
+            "customerFirst": "Someone",
+            "customerLast": "Else",
+            "customerEmail": "someone-else@some-to-domain.com",
+            "ticketNumber": "<value for ticketNumber>",
+              "orderItems": [
+                   {"itemName":"widget1", "price":3.99},
+                   {"itenName":"widget2", "price":50.25} 
+              ]
+          
+          },
+        "customArgs": {
+            "emailTo": "someone-else@some-to-domain.com",
+            "customerId": "<value for customerId>"
+        }      
+      }    
+     
+    ],
+    "headers": {
+      "x-order-id": "cust-order-112233"
+    },
+    "categories": ["some-category", "some-other-category"],
+    "template_id": "your-template-id"
+  }
