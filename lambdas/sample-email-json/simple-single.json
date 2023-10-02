@@ -1,7 +1,0 @@
-{
-    "to": "someone@some-to-domain.com",
-    "from": "<your-sendgrid-verified-sender>",
-    "subject": "Email Send from Microservice for Email Using Twilio SendGrid",
-    "text": "Email send via SendGrid and a Microservice!",
-    "html": "<p>Email send via SendGrid and a Microservice!</p>"
-}
