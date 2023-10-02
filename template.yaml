@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  SendGridEmailSendingMicroservice: SAM Template receive email events that triggers emails sent via SendGrid.
+  SendGridOutboundEmailMicroservice: SAM Template receive email events that triggers outbound emails sent via SendGrid Email API.
   
 Globals:
   Function:
