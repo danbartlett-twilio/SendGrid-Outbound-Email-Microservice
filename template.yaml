@@ -1,9 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-  sendgrid-serverless-send
-
-  SAM Template for Serverless Microservice to receive email events that triggers emails sent via SendGrid.
+  SendGridEmailSendingMicroservice: SAM Template receive email events that triggers emails sent via SendGrid.
   
 Globals:
   Function:
@@ -22,7 +20,7 @@ Resources:
   TwilioSendGridBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Sub "twilio-sendgrid-${AWS::AccountId}-${AWS::Region}"    
+      BucketName: !Sub "twilio-sendgrid-outbound-emails-${AWS::AccountId}-${AWS::Region}"    
   TwilioSendGridBucketPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties: 
@@ -37,7 +35,7 @@ Resources:
             Resource: !Join 
               - ''
               - - 'arn:aws:s3:::'
-                - !Sub "twilio-sendgrid-${AWS::AccountId}-${AWS::Region}"
+                - !Sub "twilio-sendgrid-outbound-emails-${AWS::AccountId}-${AWS::Region}"
                 - /*     
   
 
@@ -199,7 +197,7 @@ Resources:
           # For example:
           # SENDGRID_API_KEY_ID: '{{resolve:ssm:SENDGRID_API_KEY_ID}}'     
           SNStopic: !Ref SendGridEventProcessingTopic
-          BucketName: !Sub "twilio-sendgrid-${AWS::AccountId}-${AWS::Region}"
+          BucketName: !Sub "twilio-sendgrid-outbound-emails-${AWS::AccountId}-${AWS::Region}"
       Layers:
         - !Ref SendGridSharedLayer
         - !Ref SendGridNanoidLayer
