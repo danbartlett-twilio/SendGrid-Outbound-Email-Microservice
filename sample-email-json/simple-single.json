@@ -3,5 +3,9 @@
     "from": "<your-sendgrid-verified-sender>",
     "subject": "Email Sent via SendGrid Outbound Email Microservice Using Twilio SendGrid!",
     "text": "Email sent via SendGrid and a Microservice!",
-    "html": "<p>Email sent via SendGrid and a Microservice!</p>"
+    "html": "<p>Email sent via SendGrid and a Microservice!</p>",
+    "customArgs": 
+      {
+        "twilioFoo": "sendgridBar"    
+      }
 }
