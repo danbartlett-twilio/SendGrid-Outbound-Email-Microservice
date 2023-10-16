@@ -4,8 +4,13 @@
     "subject": "Email Sent via SendGrid Outbound Email Microservice Using Twilio SendGrid!",
     "text": "Email sent via SendGrid and a Microservice!",
     "html": "<p>Email sent via SendGrid and a Microservice!</p>",
+    "categories": [
+      "some-category",
+      "some-other-category"
+    ],    
     "customArgs": 
       {
         "twilioFoo": "sendgridBar"    
       }
 }
+
