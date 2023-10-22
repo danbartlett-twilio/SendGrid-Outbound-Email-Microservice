@@ -1,3 +1,5 @@
-# microservice-for-emails-using-Twilio-SendGrid
+## Microservice Template to Send Email using Twilio SendGrid’s Email API
 
-Refer to blog
+Blog comming soon!
+
+[Video Overview](https://youtu.be/jLmuNPQdiVk)
